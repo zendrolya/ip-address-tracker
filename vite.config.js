@@ -1,23 +1,8 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/ip-address-tracker/",
-
-  build: {
-    outDir: "./dist",
-    emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes("maplibre-gl")) {
-            return "maplibre";
-          }
-        },
-      },
-    },
+  server: {
+    open: true,
   },
-
-  optimizeDeps: {
-    include: ["maplibre-gl"],
-  },
+  base: "./",
 });
