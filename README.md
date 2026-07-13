@@ -2,108 +2,194 @@
 
 ![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)
 
-## Welcome! 👋
+[English](README.md) | [Russian](README.ru.md)
 
-Thanks for checking out this front-end coding challenge.
+## Table of contents
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+- [Frontend Mentor - IP address tracker](#frontend-mentor---ip-address-tracker)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshots](#screenshots)
+    - [Links](#links)
+  - [Built with](#built-with)
+    - [Third‑party services](#thirdparty-services)
+  - [Quick start](#quick-start)
+    - [Prerequisites](#prerequisites)
+    - [Installation and setup](#installation-and-setup)
+    - [Production build](#production-build)
+    - [Deploy to GitHub Pages](#deploy-to-github-pages)
+  - [Project structure](#project-structure)
+  - [How the application works](#how-the-application-works)
+    - [BEM methodology](#bem-methodology)
+    - [IP validation](#ip-validation)
+  - [Author](#author)
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this IP Address Tracker app and get it looking as close to the design as possible. To get the IP Address locations, you'll be using the [IP Geolocation API by IPify](https://geo.ipify.org/). To generate the map, we recommend using [LeafletJS](https://leafletjs.com/).
+Create an application for tracking IP addresses that is as close as possible to the design located in the `/design` folder. The design is presented in static JPG format. Using JPG files will require self‑selection of styles such as `font‑size`, `padding` and `margin`.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+All necessary resources are located in the folder `/images`. The resources have already been optimized. There is also a file `style-guide.md`, containing the necessary information, such as the color palette and fonts.
 
-Your users should be able to:
+To get the location of IP addresses, you must use the [IP Geolocation API from IPify](https://geo.ipify.org/). Otherwise, you can use any tools you like to complete the task.
 
-- View the optimal layout for each page depending on their device's screen size
-- See hover states for all interactive elements on the page
-- See their own IP address on the map on the initial page load
-- Search for any IP addresses or domains and see the key information and location
+The user should be able to:
 
----
+- View the optimal layout of each page based on the screen size of their device;
+- see the status when hovering over all interactive elements on the page;
+- Search for any IP addresses or domains and see key information and location.
 
-⚠️ **IMPORTANT** ⚠️: To use the IP Geolocation API by IPify, you'll need to sign up for a free account. You won't need to add any cards details to do this and it's a very quick process. This will generate an API Key for you. Usually, you would be able to restrict your API Key to a specific URL (your own domain). This makes sure that other people can't use your API Key on their own websites. IPify doesn't have this feature, but because you aren't adding your card details, this isn't an issue. **So be sure to only sign up for the free account and DO NOT enter any card details**.
+### Screenshots
 
-For the mapping API, we recommend using [LeafletJS](https://leafletjs.com/). It's free to use and doesn't require an API Key. If you decide to use another API, like Google Maps or Mapbox, be sure to secure your API Key. Here are guides for both Google Maps and Mapbox, be sure to read through them thoroughly:
+|                           Full-screen mode (FullHD)                            |
+| :----------------------------------------------------------------------------: |
+| ![Example of an IP search FullHD](./screenshots/full-hd-ip-search-example.png) |
 
-- [API Key best practices from Google Developers](https://developers.google.com/maps/api-key-best-practices)
-- [How to use Mapbox securely](https://docs.mapbox.com/help/troubleshooting/how-to-use-mapbox-securely/)
+|                                  2K (2560px)                                  |                              Mobile view (375px)                              |
+| :---------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
+| ![Example of an IP search 2K](./screenshots/2k-desktop-ip-search-example.png) | ![Example of an IP search Mobile](./screenshots/mobile-ip-search-example.png) |
 
-Exposing your API Key publicly can lead to other people using it to make requests for their own application if the proper precautions aren't in place. Please be sure you read the guides thoroughly and follow their recommendations.
+### Links
 
-**We don't take any responsibility if you expose your API Key while completing the challenge and have not secured it.**
+The website is available via the link: https://zendrolya.github.io/ip-address-tracker/
 
----
+## Built with
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+| Technology                                           | Version   | Purpose                                                                                                   |
+| :--------------------------------------------------- | :-------- | :-------------------------------------------------------------------------------------------------------- |
+| **[Vite](https://vite.dev/)**                        | `^8.1.1`  | Bundler and dev server. Instant module loading, hot code replacement, fast production build via Rolldown. |
+| **[MapLibre GL](https://maplibre.org/)**             | `^5.24.0` | Interactive map rendering. Open‑source fork of Mapbox GL JS with no dependency on paid APIs.              |
+| **Vanilla JS (ES Modules)**                          | —         | Application logic without frameworks. Native ES modules, Fetch API, DOM manipulation.                     |
+| **CSS (BEM)**                                        | —         | Styling following the BEM methodology. Responsive layout using CSS custom properties and variable fonts   |
+| **[IPify Geo API](https://geo.ipify.org/)**          | —         | Retrieve geolocation data by IP address or domain.                                                        |
+| **[OpenFreeMap Tiles](https://openfreemap.org/)**    | —         | Free map tiles for displaying on MapLibre.                                                                |
+| **[Rubik](https://fonts.google.com/specimen/Rubik)** | —         | Project font (weights 400, 500, 700).                                                                     |
 
-## Where to find everything
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Third‑party services
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+| Service           | Description                                                                                                                                 |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
+| **IPify Geo API** | REST API for determining IP, location, timezone and ISP. Used in `country,city` parameters. Requires an API key (`VITE_GEO_IPIFY_API_KEY`). |
+| **OpenFreeMap**   | Provides free OSM tiles in `liberty` style for rendering the MapLibre map.                                                                  |
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## Quick start
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Prerequisites
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- **Node.js** ≥ 18
+- npm, yarn or pnpm
 
-## Building your project
+### Installation and setup
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+1. Clone the repository
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+```bash
+# 1. Clone the repository
+git clone https://github.com/zendrolya/ip-address-tracker.git
+cd ip-address-tracker
+```
 
-## Deploying your project
+2. Install dependencies
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+```bash
+npm install
+```
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+3. Create a .env file and add the IPify API key
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+```bash
+# edit .env and insert your key:
+VITE_GEO_IPIFY_API_KEY=your_key
+```
 
-## Create a custom `README.md`
+4. Start the dev server
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+```bash
+npm run dev
+```
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### Production build
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+```bash
+npm run build
+```
 
-## Submitting your solution
+The output will be in the `dist/` directory.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+### Deploy to GitHub Pages
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+```bash
+npm run deploy
+```
 
-## Sharing your solution
+The script builds the project and publishes the contents of `dist/` to the `gh-pages` branch.
 
-There are multiple places you can share your solution:
+## Project structure
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+```
+ip-address-tracker/
+├── images/                    # Source images (icons, background)
+├── screenshots/               # Screenshots for README
+├── design/                    # Design mockups (JPG)
+├── src/
+│   ├── fonts/                 # Rubik fonts + font.css
+│   ├── scripts/
+│   │   ├── index.js           # Entry point: form handling, API requests
+│   │   ├── map.js             # MapLibre initialization and update
+│   │   └── validate-ip.js     # IPv4 address validation with regular expression
+│   └── styles/
+│       ├── variables.css      # CSS custom properties (colors, sizes)
+│       ├── style.css          # Main styles (mobile version)
+│       └── desktop.css        # Desktop styles (≥1024px)
+├── index.html                 # HTML entry point
+├── vite.config.js             # Vite configuration
+├── package.json               # Dependencies and scripts
+├── .env                       # Environment variables (API key) (must be created)
+├── style-guide.md             # Frontend Mentor style guide
+└── todo.md                    # Brief project development plan
+```
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+## How the application works
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+1. **On page load** a MapLibre map is initialized with a view of Moscow (default).
+2. **The user enters** an IP address in the search form.
+3. **Validation**: `validate-ip.js` checks the address with an IPv4 regular expression.
+4. **API request**: if the IP is valid, a request is made to `geo.ipify.org/api/v2/country,city` to fetch location data.
+5. **Display results**: IP, region, city, postal code, timezone and ISP are printed on the page.
+6. **Map updates**: the `flyTo()` function smoothly moves the camera to the found coordinates and places the marker at the location.
 
-## Got feedback for us?
+### BEM methodology
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+All CSS classes follow the [Block‑Element‑Modifier (BEM)](https://en.bem.info/) methodology:
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+```
+.header
+.header__title
+.header__form
+.header__input
+.header__btn
+.info__element
+.info__element-title
+.info__element-text
+.footer__attribution
+.footer__link
+```
 
-**Have fun building!** 🚀
+### IP validation
+
+The `validateIp()` function checks whether the entered value conforms to the IPv4 format. If the input is invalid, the user receives an `alert()` notification.
+
+## Author
+
+**Ilya Drozdenko** — [@zendrolya](https://github.com/zendrolya)
+
+Project created as part of the [Frontend Mentor](https://www.frontendmentor.io/) code challenge.
