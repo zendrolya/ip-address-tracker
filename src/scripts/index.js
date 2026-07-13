@@ -1,6 +1,6 @@
 import { validateIp } from "./validate-ip";
 import { updateMap, initMap } from "./map";
-const GEO_IPIFY_API_KEY = import.meta.env.GEO_IPIFY_API_KEY;
+const GEO_IPIFY_API_KEY = import.meta.env.VITE_GEO_IPIFY_API_KEY;
 
 const seacrhForm = document.querySelector(".header__form");
 const ipInput = document.querySelector(".header__input");
@@ -25,7 +25,7 @@ function handleSubmit(evt) {
 }
 
 function handleEnter(evt) {
-  if (evt.key === "Enter") handleSubmit();
+  if (evt.key === "Enter") handleSubmit(evt);
 }
 
 function setInfo(data) {
