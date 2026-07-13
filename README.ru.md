@@ -2,7 +2,7 @@
 
 ![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)
 
-[English](README.md) | [Russian](README.ru.md)
+[English](README.md) | [Русский](README.ru.md)
 
 ## Оглавление
 
