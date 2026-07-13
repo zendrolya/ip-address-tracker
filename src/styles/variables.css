@@ -1,0 +1,16 @@
+:root {
+  font-family: "Rubik Static", "Arial", sans-serif;
+  font-size: 10px;
+
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --dark-blue: #060b24;
+  --links: #9eabff;
+  --links-hover: #676fab;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Rubik", "Rubik Static", "Arial", sans-serif;
+  }
+}

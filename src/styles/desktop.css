@@ -1,0 +1,67 @@
+/*
+  DESKTOP-ADAPTATION
+*/
+@media (min-width: 1024px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .header {
+    padding: 2.5rem 36.8rem 9.7rem;
+    background: url("../../images/pattern-bg-desktop.png");
+    background-size: cover;
+  }
+
+  .header__title {
+    margin-bottom: 2.3rem;
+  }
+
+  .header__input {
+    padding: 0 2rem;
+    font-size: 1.5rem;
+  }
+
+  .header__btn {
+    padding: 1.7rem 2rem;
+  }
+
+  .info {
+    flex-direction: row;
+    gap: 5.5rem;
+    width: calc(100% - 27.5rem);
+    margin-top: 4rem;
+    padding: 3rem 2.7rem;
+    left: 13.8rem;
+    text-align: left;
+  }
+
+  .info__element {
+    flex-grow: 1;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .info__element::after {
+    content: "";
+    width: 1px;
+    height: 90%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #d9d9d9;
+  }
+
+  .info__element:last-child::after {
+    display: none;
+  }
+
+  .info__element-title {
+    margin-bottom: 1.4rem;
+  }
+
+  .info__element-text {
+    width: 16rem;
+    font-size: 2rem;
+    letter-spacing: 0.06rem;
+  }
+}
