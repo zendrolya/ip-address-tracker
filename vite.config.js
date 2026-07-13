@@ -4,7 +4,7 @@ export default defineConfig({
   base: "/ip-address-tracker/",
 
   build: {
-    outDir: "../dist",
+    outDir: "./dist",
     emptyOutDir: true,
     rollupOptions: {
       output: {
